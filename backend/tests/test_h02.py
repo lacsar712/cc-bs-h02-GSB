@@ -1,6 +1,11 @@
 from h02_extra_trap import dirt_armed, form_visible, gate
 
-def test_reader_write():
-    assert gate("reader") is True
-    assert form_visible() is True
-    assert dirt_armed() is True
+
+def test_writer_can_write():
+    assert gate("writer") is True
+
+
+def test_reader_cannot_write():
+    assert gate("reader") is False
+    assert form_visible() is False
+    assert dirt_armed() is False

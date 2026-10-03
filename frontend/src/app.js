@@ -152,7 +152,7 @@ const App = {
       );
     }
 
-    const isWriter = true; /* h02-trap-form */
+    const isWriter = state.user?.role === "writer";
 
     return m("div.wrap", [
       m("div.topbar", [
